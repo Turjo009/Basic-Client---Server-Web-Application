@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="javascripts/myJavaScript.js"></script>
+</head>
+<body>
+
+  <div class="main">
+
+    <nav class="taskbar">
+      <ul>
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="message.html">Message Page</a></li>
+      </ul>
+    </nav>
+
+
+    <h1>Book Gallery</h1>
+    <p>You can select any of the books by clicking on the images. <br>
+      Once you have selected an image, Write a message.
+      <br> Clicking on the "Send" button will send the message to the Seller</p>
+    <div class="photo">
+        <input type="radio" name="photo" value="Oliver Twist" id="photo1-radio">
+        <label for="photo1-radio">
+          <img src="images/Oliver Twist.jpg" alt="Picture of Oliver Twist book" onclick="selectPhoto('photo1-radio')">
+        </label>
+        <p>Caption for Photo 1</p>
+      </div>
+
+      <div class="photo">
+        <input type="radio" name="photo" value="Clean Code" id="photo2-radio">
+        <label for="photo2-radio">
+          <img src="images/clean-code.jpg" alt="Picture of Clean Code book" onclick="selectPhoto('photo2-radio')">
+        </label>
+        <p>Caption for Photo 2</p>
+
+      </div>
+
+      <div class="photo">
+        <input type="radio" name="photo" value="Algorithm" id="photo3-radio">
+        <label for="photo3-radio">
+          <img src="images/Algorithm.jpg" alt="Picture of Algorithm book" onclick="selectPhoto('photo3-radio')">
+        </label>
+        <p>Caption for Photo 3</p>
+      </div>
+      <div class="message-form">
+        <textarea id="message-input" placeholder="Enter your message"></textarea>
+        <br>
+        <p id="messageSent"></p>
+        <button type="button" id="submit-button" onclick="sendMessage()">Send</button>
+      </div>
+  </div>
+</body>
+</html>
